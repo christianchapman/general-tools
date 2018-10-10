@@ -1,0 +1,31 @@
+#! /usr/bin/python2.7.exe
+
+import sys
+import os
+import pdb
+
+#pdb.set_trace()
+
+chris = "fuck shit piss"
+x = "fu"
+cmd = ""
+snmp = sys.argv[1]
+configs = sys.argv[2]
+
+with open(snmp) as f:
+    snmp_correct = f.read().splitlines()
+
+with open(configs) as g:
+    config = g.read().splitlines()
+
+found =0
+for chris in snmp_correct :
+   for  x in config :
+     if chris in x :
+           found = 1
+   if (found != 1) :
+       print "### Its not there %s in %s" %(chris,configs)
+       found = 0
+   else :
+      found = 0
+
