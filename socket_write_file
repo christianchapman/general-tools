@@ -1,0 +1,21 @@
+#! /usr/bin/python
+
+import sys
+import socket
+
+fr = sys.argv[1]
+fw = sys.argv[2]
+file_input =  open(fr)
+file_output = open(fw,'w')
+
+buf = file_input.readlines()
+for entry in buf :
+   temp = entry.split()
+   host = temp[0]
+   ip = socket.gethostbyname(host)
+   entry = entry.rstrip()
+   print ("%-20s %s" % (ip,entry))
+   file_output.write("%-20s %s\n" % (ip,entry))
+
+file_input.close()
+file_output.close()
