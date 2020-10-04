@@ -6,7 +6,7 @@ import pdb
 
 #pdb.set_trace()
 
-chris = "fuck shit piss"
+chris = "tom dick harry"
 x = "fu"
 cmd = ""
 snmp = sys.argv[1]
