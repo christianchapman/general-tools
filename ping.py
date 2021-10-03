@@ -22,4 +22,4 @@ if response == 0:
 else:
   print ("%s %s is down " %(ip,hostname))
   txt = "%s %s is down\n" %(ip,hostname)
-  f.write( tx
+  f.write( txt)
