@@ -1,0 +1,8 @@
+
+git init 
+git config --global user.name "christianchapman"
+git config --global user.email "christian@networkcloudarchitecture.com"
+gh auth login
+git add wlc
+git commit -m "Changed XXXXXX"
+git push origin master
