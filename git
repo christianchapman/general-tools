@@ -7,3 +7,15 @@ git add wlc
 git commit -m "Changed XXXXXX"
 git push origin master
 git status
+
+
+\\*** Read up on 
+
+$ git clone https://github.com/perfsonar/owamp.git
+$ cd owamp/
+$ git submodule update --init
+$ ./bootstrap
+$ ./configure
+$ make            ## no errors here
+
+\\***
