@@ -1,0 +1,46 @@
+#!/usr/bin/expect -f
+
+# not very sure, but ...
+set MYUSER "chapcd  "
+set MYPASS "c"
+set ENPASS "mysecretenable"
+
+#logfile for the expect script
+log_file "expect.log"
+
+#Write transfer parameters of the function in variables
+set hostname [lindex $argv 0]
+set ipaddress [lindex $argv 1]
+
+#send some information to log
+send_log "Start processing with the values:\n"
+send_log $hostname\n
+send_log $ipaddress\n
+
+#open ssh connection, use ip address
+spawn ssh $ipaddress -l $MYUSER
+
+match_max 100000
+
+#expect password request and send login password or error message and exit with code 2 if error occurs
+expect {
+"*password:" {send "${MYPASS}\r" }
+"*Connection reset by peer" {exit 2}
+}
+
+#wait for the prompt and send command "enable"
+expect {
+"\r*>" {send "enable\r" }
+}
+
+#wait for password request and send enable password
+expect {
+"*assword:" {send "${ENPASS}\r" }
+}
+
+#wait for enable prompt
+expect "*#"
+
+#we are now connected and reached enable mode
+#place additional expect and send commands below this line
+exit 0
