@@ -1,5 +1,5 @@
 #! /usr/bin/python
-
+rm -rf “$HOME/Library/Application Support/Figma/”{Desktop,DesktopProfile}
 import sys
 import os
 import pdb
