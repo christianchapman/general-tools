@@ -1,5 +1,8 @@
 #! /usr/bin/python
 rm -rf “$HOME/Library/Application Support/Figma/”{Desktop,DesktopProfile}
+https://help.figma.com/hc/en-us/requests/new?ticket_form_id=360001744374
+
+
 import sys
 import os
 import pdb
