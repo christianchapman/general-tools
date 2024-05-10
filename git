@@ -19,3 +19,4 @@ $ ./configure
 $ make            ## no errors here
 
 \\***
+https://example-reporting-node-api-domain/ibreports/web/log/url/entries?auditRecord=-1&callout=-1&caseInsensitive=false&categoryId=1000000&currentRowNumber=1&email=&externalSearchEnabled=false&generatorId=-1&includeAllRecord=true&includeLogReports=true&isAdvancedSearch=true&locale=en_US&localizeLogTime=true&maxItemsToReturn=100&orderAscending=false&priority=-1&privateAccess=-1&reportingGroup=-1&searchLogType=-1&sortByCriteria=SORT_BY_DATE&startTimeMillies=1628125877000&statusRecord=-1&swgGateway=all&tableName=url_log_entry_05082023&wildCard=false
