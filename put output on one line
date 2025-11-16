@@ -1,0 +1,4 @@
+echo -e "apple\nbanana\ncherry" | paste -sd '#'
+
+d = delimeter
+s = serial 
